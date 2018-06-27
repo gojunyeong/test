@@ -28,12 +28,12 @@ def makeXLSX(refinelist):
     ws['E1'] = "Height"
     ws['F1'] = "Team"
     for index, refineObject in enumerate(refinelist, 2):
-        ws(1, index, refineObject["id"]+"")
-        ws(2, index, refineObject["title"]+"")
-        ws(3, index, refineObject["template_name"]+"")
-        ws(4, index, refineObject["birthDate"]+"")
-        ws(5, index, refineObject["height"]+"")
-        ws(6, index, refineObject["currentTeam"]+"")
+        ws.cell(1, index, refineObject["id"]+"")
+        ws.cell(2, index, refineObject["title"]+"")
+        ws.cell(3, index, refineObject["template_name"]+"")
+        ws.cell(4, index, refineObject["birthDate"]+"")
+        ws.cell(5, index, refineObject["height"]+"")
+        ws.cell(6, index, refineObject["currentTeam"]+"")
 
     wb.save('./output/soccer')
 
